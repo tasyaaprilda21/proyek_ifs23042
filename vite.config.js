@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     build: {
-      outDir: "../public_html", // folder hasil build
+      outDir: "public_html", // ✅ ubah jadi di dalam folder project
+      emptyOutDir: true, // ✅ bersihkan sebelum build (opsional tapi aman)
     },
     define: {
       DELCOM_BASEURL: JSON.stringify(env.VITE_DELCOM_BASEURL || ""),
