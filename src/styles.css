@@ -1,0 +1,272 @@
+/* Versi aman tapi tetap pastel & lembut */
+body {
+  background-color: #f0f6ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn {
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+input,
+textarea {
+  border-radius: 8px !important;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #4da3ff, #7cc6ff);
+}
+
+/* ---------- Dashboard / Home additions (paste di akhir styles.css) ---------- */
+
+.home-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+/* Story strip */
+.story-list {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 10px 6px;
+  margin-bottom: 18px;
+  -webkit-overflow-scrolling: touch;
+}
+.story-item {
+  flex: 0 0 auto;
+  width: 76px;
+  text-align: center;
+}
+.story-item img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e6f6ff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.story-item small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #023047;
+}
+
+/* Bottom navigation (floating) */
+.bottom-nav {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 760px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  z-index: 60;
+  backdrop-filter: blur(6px);
+}
+.bn-item {
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+.bn-item .bn-ico {
+  font-size: 18px;
+}
+.bn-item .bn-label {
+  font-size: 11px;
+  color: #64748b;
+}
+.bn-item.active {
+  color: #0077b6;
+}
+.bn-item.center-btn {
+  background: linear-gradient(180deg, #0077b6, #006699);
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px 14px;
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.28);
+  transform: translateY(-8px);
+  font-size: 20px;
+}
+
+/* small screens */
+@media (max-width: 720px) {
+  .home-layout {
+    padding: 12px;
+  }
+  .story-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .bottom-nav {
+    width: calc(100% - 20px);
+    bottom: 10px;
+  }
+}
+
+/* 🌸 Modern Pastel PostCard UI */
+.posts-layout {
+  padding: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.posts-header h2 {
+  color: #023047;
+  font-weight: 700;
+}
+
+.btn-add {
+  background-color: #0096c7;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-add:hover {
+  background-color: #0077b6;
+}
+
+.empty-text {
+  text-align: center;
+  color: #8a8a8a;
+  margin-top: 80px;
+  font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.postgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Post Card */
+.postcard {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.postcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.postcard-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.postcard-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.postcard-author {
+  font-size: 0.9rem;
+  color: #0077b6;
+  font-weight: 600;
+}
+
+.postcard-desc {
+  color: #023047;
+  margin: 8px 0;
+  font-weight: 500;
+  min-height: 45px;
+}
+
+.postcard-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.postcard-time {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+.postcard-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.btn-view,
+.btn-like,
+.btn-delete {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btn-view {
+  color: #0077b6;
+}
+.btn-view:hover {
+  transform: scale(1.1);
+}
+
+.btn-like {
+  color: #ef476f;
+}
+.btn-like:hover {
+  transform: scale(1.2);
+}
+
+.btn-delete {
+  color: #e63946;
+}
+.btn-delete:hover {
+  transform: scale(1.2);
+}
