@@ -1,7 +1,7 @@
 .auth-container {
   display: flex;
   height: 100vh;
-  background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+  background: white;
   font-family: "Poppins", sans-serif;
 }
 

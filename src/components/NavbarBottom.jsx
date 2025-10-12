@@ -21,7 +21,7 @@ export default function NavbarBottom() {
         <span className="bn-label">Search</span>
       </Link>
 
-      <Link to="/add" className="bn-item center-btn">
+      <Link to="/add-post" className="bn-item center-btn">
         <span className="bn-plus">＋</span>
       </Link>
 

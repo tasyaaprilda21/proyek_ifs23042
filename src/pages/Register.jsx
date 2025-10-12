@@ -27,11 +27,8 @@ export default function Register() {
         Swal.fire("Gagal", res.message || "Registrasi gagal", "error");
       }
     } catch (err) {
-      Swal.fire(
-        "Error",
-        err.response?.data?.message || "Registrasi gagal",
-        "error"
-      );
+      const errorMessage = err.message || err.response?.data?.message || "Registrasi gagal";
+      Swal.fire("Error", errorMessage, "error");
     }
   };
 

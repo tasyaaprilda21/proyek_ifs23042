@@ -30,9 +30,9 @@ export default function Login() {
       } else {
         Swal.fire("Gagal", res.message || "Email/password salah", "error");
       }
-      a;
     } catch (err) {
-      Swal.fire("Error", err.response?.data?.message || "Login gagal", "error");
+      const errorMessage = err.message || err.response?.data?.message || "Login gagal";
+      Swal.fire("Error", errorMessage, "error");
     }
   };
 

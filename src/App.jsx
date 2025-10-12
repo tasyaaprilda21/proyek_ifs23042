@@ -36,7 +36,7 @@ export default function App() {
       <div
         style={{
           minHeight: "100vh",
-          background: "linear-gradient(135deg, #f0f9ff, #e0f7fa)",
+          background: "white",
         }}
       >
         <Routes>
@@ -52,7 +52,7 @@ export default function App() {
 
           {/* ➕ Tambah post */}
           <Route
-            path="/add"
+            path="/add-post"
             element={
               <ProtectedRoute>
                 <AddPost />
