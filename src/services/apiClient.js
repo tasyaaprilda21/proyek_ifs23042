@@ -48,11 +48,11 @@ api.interceptors.response.use(
       data: error.response?.data,
       message: error.message
     });
+
+    
     return Promise.reject(error);
   }
 );
-
-
 
 
 
