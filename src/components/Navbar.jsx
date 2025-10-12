@@ -5,12 +5,12 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    Swal.fire("Logout", "Kamu telah keluar", "info");
-    navigate("/login");
-    window.location.reload();
-  };
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  Swal.fire("Logout", "Kamu telah keluar", "info");
+  navigate("/login");
+};
+
 
   return (
     <nav
